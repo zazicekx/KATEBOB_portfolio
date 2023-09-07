@@ -5,6 +5,8 @@ module.exports = {
       primary: 'Orbitron',
       secondary: 'Rajdhani',
       tertiary: 'Aldrich',
+      artist: "Fredericka the Great",
+      four: "Playfair Display"
     },
     container: {
       padding: {
