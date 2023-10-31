@@ -80,7 +80,8 @@ const Banner = () => {
                         whileInView={"show"}
                         viewport={{ once: false, amount: 0.7 }}
                         className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
-                        <a href="#">
+                        <a href="https://www.instagram.com/bobek.kresli/"
+                            target="_blank" rel="noopener noreferrer">
                             <FaInstagram />
                         </a>
                         <a href="#">
