@@ -17,7 +17,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        if (!emailValid || !userNameValid) {
+        if (!emailValid || !userNameValid || !messageValid ) {
             if (!emailValid) {
                 emailErrorNotify()
             }
@@ -39,6 +39,10 @@ const Contact = () => {
             (result) => {
                 console.log(result.text);
                 succesNotify()
+                e.target.reset()
+                setEmailValid(false)
+                setUserNameValid(false)
+                setMessageValid(false)
             },
             (error) => {
                 console.log(error.text);
@@ -150,7 +154,7 @@ const Contact = () => {
                                     gap-y-6 pb-24 p-6 items-start">
                         <input
                             className={`bg-transparent border-b py-3 outline-none w-full 
-                                          placeholder:text-white focus:border-accent transition-all ${!userNameValid ? 'border-red-500' : 'border-green-500'
+                                          placeholder:text-white focus:border-accent transition-all ${!userNameValid ? 'border-accent' : 'border-green-500'
                                 }`}
                             type="text"
                             placeholder="Tvoje meno"
@@ -159,7 +163,7 @@ const Contact = () => {
                         />
                         <input
                             className={`bg-transparent border-b py-3 outline-none w-full 
-                                          placeholder:text-white focus:border-accent transition-all ${!emailValid ? 'border-red-500' : 'border-green-500'
+                                          placeholder:text-white focus:border-accent transition-all ${!emailValid ? 'border-accent' : 'border-green-500'
                                 }`}
                             type="text"
                             placeholder="Tvoj e-mail"
